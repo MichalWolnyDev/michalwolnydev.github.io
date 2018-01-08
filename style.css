@@ -208,14 +208,11 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    align-content:center;
+    align-content: center;
     justify-content: center;
 }
 
 .square{
-
-
-
 
     display: flex;
     width:30vw;
