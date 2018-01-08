@@ -223,10 +223,6 @@ header{
 }
 .square > i{
     color:white;
-
-
-
-
     display: flex;
     align-items: center;
     font-size:84px;
@@ -237,7 +233,11 @@ header{
     transition: background 0.5s ease-in;
     cursor: pointer;
     border-bottom:none;
-    background: rgba(210, 105, 30, 0.8);
+
+    background: rgba(67, 102, 123, 0.8);
+    /*background: rgba(78, 110, 105, 0.8);
+    /*background: rgba(210, 105, 30, 0.8);*/
+
 
 }
 .hide{
