@@ -1,0 +1,36 @@
+ODNOŒNIKI ( POD LISTA ) bez herfa
+
+  <ul class="underlist">
+
+                                <li><span></span>lorem ipsum</li>
+                                <li><span></span>lorem ipsum</li>
+                                <li><span></span>lorem ipsum</li>
+                                <li><span></span>lorem ipsum</li>
+                                <li><span></span>lorem ipsum</li>
+
+
+                            </ul>
+
+           code elements
+
+   <div class="bg_code">
+                        <div class="spaner"> KOD</div>
+                        <div class="copy" onclick="cpy('#1litera_sekcji_numer')">SKOPIUJ</div>
+                        <div class="content_code">
+                        <span class="c_item" id="(1litera_sekcji_numer)">
+                               
+                        </span>
+                        </div>
+                </div>
+
+raw elements
+ <div class="raw col-12">
+                    <div  class="bg_raw">
+                        <div class="spaner">LIVE</div>
+                        <div class="content_raw">
+                            <div class="">
+                                <a href="">Przyk³adowa Strona</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
