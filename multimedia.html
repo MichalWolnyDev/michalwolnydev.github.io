@@ -32,8 +32,8 @@
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                         <a href="html_index.html">Kurs HTML</a>
                         <a href="podstawy.html">Podstawy</a>
-                        <a href="#">Odsyłacze</a>
-                        <a href="multimedia.html">Multimedia</a>
+                        <a href="odnosniki.html">Odsyłacze</a>
+                        <a href="#">Multimedia</a>
                         <a href="#">Formularze</a>
 
 
@@ -68,7 +68,7 @@
             <!--     START CONTENT -->
             <div class="contents col-lg-9 col-xs-12 col-sm-12">
                 <div class="title">
-                    <h1>Odsyłacze</h1>
+                    <h1>Multimedia</h1>
                 </div>
 
 
@@ -76,9 +76,8 @@
                 <div class="content_section list">
                     <ul class="underlist">
 
-                        <li><span></span><a class="page-scroll" href="#c1">Odsyłacze do podstron</a></li>
-                        <li><span></span><a class="page-scroll" href="#c2">Odsyłacze do etykiet</a></li>
-                        <li><span></span><a  class="page-scroll" href="#c3">Odsyłacz pocztowy</a></li>
+                        <li><span></span><a class="page-scroll" href="#c1">Obrazy</a></li>
+                        <li><span></span><a class="page-scroll" href="#c2">Video</a></li>
 
 
 
@@ -91,7 +90,8 @@
                         <h2>Wstęp</h2>
                     </div>
                     <p class="txt_chapter">
-                        Odsyłacze - inaczej hiperłącza, odnośniki hipertekstowe, linki - stanowią całą istotę Internetu. Bez nich byłby on jedynie wielką siecią do pobierania "suchych" danych, a dokumenty znajdujące się w niej, nie byłyby w żaden sposób ze sobą powiązane. Praktycznie na każdej stronie WWW spotyka się odsyłacze. Najczęściej stanowi je specjalnie wyróżniony krótki tekst (lub obrazek), po kliknięciu którego, następuje przeniesienie do innej strony. Odsyłacze są wykorzystywane głównie do dwóch najważniejszych celów: - Tworzenie spisu treści serwisu - spis taki jest podobny do tego, który występuje w zwykłych książkach. Jego zaletą jest jednak to, że nie trzeba ręcznie przeszukiwać całej zawartości w poszukiwaniu określonego numeru strony, ale wystarczy kliknąć odsyłacz i zostaniemy automatycznie przeniesieni we wskazane miejsce. - Linki do innych ciekawych miejsc w Internecie - zawiera je niemal każdy serwis internetowy. Jeśli użytkownik będzie chciał przeczytać więcej o danym zagadnieniu, będzie mógł skorzystać z takich odsyłaczy. W porównaniu z wyszukiwarkami internetowymi, linki mają taką zaletę, że autor zwykle starannie je wybrał i dlatego zawierają najczęściej rzetelne informacje, których odszukanie w tradycyjny sposób mogłoby zająć dużo więcej czasu. Gdyby nie odsyłacze, cały ten kurs musiałby składać się z jednej ogromnej strony lub z wielu nie powiązanych ze sobą dokumentów, przez co nawigacja w takim serwisie byłaby niezwykle utrudniona. Aby wejść na dowolną stronę (nawet w tym samym serwisie), za każdym razem trzeba by było wpisywać jej adres w przeglądarce.
+                      Strony internetowe to jednak nie sam tekst, dzisiejsze strony opierają się w dużej mierze także na obrazach lub nawet filmach.
+                      W tym rozdziale dowiesz się jak wstawić na swoją stronę obrazek czy film.
                     </p>
 
                 </div>
@@ -99,10 +99,11 @@
                 <!--START CHAPTER-->
                 <div  id="c1"class="chapter">
                     <div class="title_chapter">
-                        <h2>Odsyłacz do Podstron</h2>
+                        <h2>Obrazy</h2>
                     </div>
                     <p class="txt_chapter">
-                        Tak jak każda książka składa się z rozdziałów, tak samo serwisy internetowe składają się zwykle z podstron. Każda podstrona jest osobnym plikiem HTML i zawiera treść, która dość znacznie różni się tematycznie od pozostałych. Taka organizacja ułatwia użytkownikowi nawigację oraz zapobiega niepotrzebnemu wczytywaniu całego serwisu od razu (co trwałoby prawdopodobnie bardzo długo).
+                        Umieszczenie obrazka na swojej stronie nie jest niczym skomplikowanym. Służy do tego jeden prosty znacznik, a mianowicie
+                        <code>&lt;img&gt;</code>
                     </p>
 
                     <div class="code col-12">
@@ -111,11 +112,9 @@
                             <div class="copy" onclick="cpy('#o1')">SKOPIUJ</div>
                             <div class="content_code">
                                 <span class="c_item d-flex justify-content-start">
-                            &lt; <span class="z">a&nbsp;</span> <span class="c">href</span>= ” <span class="k">scieżka bezwzględna  do strony</span> ” &gt; tekst który będzie odnośnikiem &lt;/<span class="z">a</span>&gt;
+                            &lt; <span class="z">img&nbsp;</span> <span class="c">src</span>= ” <span class="k">scieżka do obrazu</span> ” /&gt;
                                 </span>
-                                <span class="c_item d-flex justify-content-start" id="o1">
-                            &lt; <span class="z">a&nbsp;</span> <span class="c">href</span>= ” <span class="w">przyklad.html</span> ” &gt; przykładowa strona &lt;/<span class="z">a</span>&gt;
-                                </span>
+
                             </div>
                         </div>
                     </div>
@@ -125,7 +124,38 @@
                             <div class="spaner">LIVE</div>
                             <div class="content_raw">
                                 <div class="">
-                                    <a href="">Przykładowa Strona</a>
+                                    <img width="100" height="100" src="smile.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="txt_chapter">
+                        Obrazek można także umieścić jako tło jakiegoś elementu na stronie, np. bloku <code>&lt;div&gt;</code>.
+                        Aby tego dokonać należy nadać właściwość <code>background-image:url('sciezka do pliku')</code> w stylach danego bloku.
+                    </p>
+
+                    <div class="code col-12">
+                        <div class="bg_code ">
+                            <div class="spaner"> KOD</div>
+                            <div class="copy" onclick="cpy('#o1')">SKOPIUJ</div>
+                            <div class="content_code">
+                              <span class="c_item d-flex justify-content-start">
+                           &lt; <span class="z">div&nbsp;</span> <span class="c">style</span>= ” <span class="k">background-image:url(park.jpg); background-size:cover; width:100px; height:100px</span> ” &gt;
+                              </span>
+                                <span class="c_item d-flex justify-content-start">
+                            &lt; /<span class="z">div</span>&gt;
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="raw col-12">
+                        <div class="bg_raw">
+                            <div class="spaner">LIVE</div>
+                            <div class="content_raw">
+                                <div class="">
+                                    <div style="background-image:url(park.jpg); background-size:cover; width:100px; height:100px"></div>
                                 </div>
                             </div>
                         </div>
@@ -136,10 +166,11 @@
                 <!--START CHAPTER-->
                 <div id="c2" class="chapter">
                     <div class="title_chapter">
-                        <h2>Odsyłacz do etykiet</h2>
+                        <h2>Video</h2>
                     </div>
                     <p class="txt_chapter">
-                        Pewnie już nieraz spotkaliście się z takim linkiem, który nie prowadził was na inną stronę, tylko przenosił was do innej sekcji tej samej strony. Są to, jak już wcześniej wspomnieliśmy, linki wewnętrzne, które pomagają w nawigacji po stronie. Ten rodzaj linku szczególnie pomocny jest, gdy strona jest dość obszerna i posiada dużo różnych informacji. Konstrukcja takiego linku jest dość prosta. Wymaga jedynie podania nazwy id danego elementu poprzedzonej krzyżykiem, czy też hash tagiem, w każdym razie takim znakiem #. Przykładem jest menu w tej sekcji na górze strony.
+                        Wstawienie filmu jest równie łatwe co wstawienie obrazka, tutaj operujemy na znaczniku <code>&lt;iframe&gt;</code>
+
                     </p>
 
                     <div class="code col-12">
@@ -148,14 +179,11 @@
                             <div class="copy" onclick="cpy('#o2')">SKOPIUJ</div>
                             <div class="content_code">
                                 <span class="c_item d-flex justify-content-start">
-                           &lt; <span class="z">a&nbsp;</span> <span class="c">href</span>= ” <span class="k">#  oraz nazwa ID danego elementu</span> ” &gt; <span class="k">tekst który będzie odnośnikiem</span> &lt;/<span class="z">a</span>&gt;
+                                  &lt; <span class="z">iframe&nbsp;</span> <span class="c">width</span>= ” <span class="k">560</span> ” &nbsp;<span class="c">height</span>= ” <span class="k">315</span> ”
+                                   &nbsp;<span class="c">src</span>= ” <span class="k">ścieżka bądź link do filmu</span> ” &gt;
                                 </span>
-                                <span class="c_item d-flex justify-content-start" id="o2">
-                            &lt; <span class="z">a&nbsp;</span> <span class="c">href</span>= ” <span class="w">#kurs</span> ” &gt; przykładowa strona &lt;/<span class="z">a</span>&gt;
-
-
-
-                                &lt; <span class="z">div&nbsp;</span> <span class="c">id</span>= ” <span class="w">kurs</span> ” &gt; #4b3TEam &lt;/<span class="z">div</span>&gt;
+                                <span class="c_item d-flex justify-content-start" id="o3">
+                                  &lt; / <span class="z">iframe</span> &gt;
                                 </span>
                             </div>
                         </div>
@@ -166,7 +194,8 @@
                             <div class="spaner">LIVE</div>
                             <div class="content_raw">
                                 <div class="">
-                                    <a href="">Przykładowa Strona</a>
+                                  <iframe width="560" height="315" src="https://www.youtube.com/embed/k2IydkL3EOs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
                                 </div>
                             </div>
                         </div>
@@ -174,41 +203,7 @@
 
                 </div>
                 <!--         END CHAPTER-->
-                <!--START CHAPTER-->
-                <div  id="c3"class="chapter">
-                    <div class="title_chapter">
-                        <h2>Odsyłacz pocztowy</h2>
-                    </div>
-                    <p class="txt_chapter">
-                        Dzięki temu odsyłaczowi, użytkownicy oglądający Twoją stronę, będą mogli wysłać list e-mail pod adres podany w poleceniu. Po kliknięciu takiego odnośnika, list nie zostanie wysłany natychmiastowo, lecz nastąpi otwarcie domyślnego programu pocztowego użytkownika (np. Outlook Express), w którym będzie on mógł wpisać treść listu, a potem go wysłać do wskazanego adresata, którego e-mail pojawi się automatycznie. Jeśli podasz swój własny adres, będziesz w stałym kontakcie z użytkownikami odwiedzającymi Twój serwis.
-                    </p>
 
-                    <div class="code col-12">
-                        <div class="bg_code ">
-                            <div class="spaner"> KOD</div>
-                            <div class="copy" onclick="cpy('#o1')">SKOPIUJ</div>
-                            <div class="content_code">
-                                <span class="c_item d-flex justify-content-start">
-                            &lt; <span class="z">a&nbsp;</span> <span class="c">href</span>= ” <span class="k">mailto: adres e-mail</span> ” &gt; tekst który będzie odnośnikiem &lt;/<span class="z">a</span>&gt;
-                                </span>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="raw col-12">
-                        <div class="bg_raw">
-                            <div class="spaner">LIVE</div>
-                            <div class="content_raw">
-                                <div class="">
-                                    <a href="mailto:test@test.com">Kliknij aby wysłać maila</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!--         END CHAPTER-->
 
             </div>
             <!--    END CONTENT-->
@@ -218,8 +213,8 @@
                   <li class="spis" href="#">Spis Treści</li>
                   <a class="nav-link" href="html_index.html">Kurs HTML</a>
                   <a class="nav-link" href="podstawy.html">Podstawy</a>
-                  <a class="nav-link active" href="#">Odsyłacze</a>
-                  <a class="nav-link" href="multimedia.html">Multimedia</a>
+                  <a class="nav-link" href="odnosniki.html">Odsyłacze</a>
+                  <a class="nav-link active" href="#">Multimedia</a>
                   <a class="nav-link" href="#">Formularze</a>
                 </nav>
 
