@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>KURS HTML</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href='custom.css'>
+
+    <link rel="stylesheet" href="code.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="respo.css">
+    <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body >
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+
+                <div class="burger hidden-lg-up">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="index.html">Kurs HTML</a>
+                        <a href="podstawy.html">Podstawy</a>
+                        <a href="odnosniki.html">Odsyłacze</a>
+                        <a href="multimedia.html">Multimedia</a>
+                        <a href="formularze.html">Formularze</a>
+                        <a href="#">CSS</a>
+
+
+                    </div>
+
+                </div>
+                <a class="navbar-brand" href="index.html"> KURS HTML</a>
+
+            </div>
+
+        </div>
+        <span class="burger hidden-lg-up" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    </nav>
+    <!--<div class="kafelki">
+    <div class="k_item js">
+        <span >JS</span>
+    </div>
+    <div class="k_item">
+        <span>JS</span>
+    </div>
+    <div class="k_item">
+        <span>JS</span>
+    </div>
+    <div class="k_item">
+        <span>JS</span>
+    </div>
+</div>-->
+    <div class="container">
+        <div class=" row-eq-height row ">
+
+            <!--     START CONTENT -->
+            <div class="contents col-lg-9 col-xs-12 col-sm-12">
+                <div class="title">
+                    <h1>CSS</h1>
+                </div>
+
+
+
+                <div class="content_section list">
+                    <ul class="underlist">
+
+                        <li><span></span><a class="page-scroll" href="#c1">Dodawanie stylów</a></li>
+                        <li><span></span><a class="page-scroll" href="#c2">Selektory CSS</a></li>
+                        <li><span></span><a class="page-scroll" href="#c3">Reguły CSS</a></li>
+                        <li><span></span><a  class="page-scroll" href="#c4">Dokumentacja CSS</a></li>
+
+
+
+                    </ul>
+                </div>
+
+                <div class="chapter">
+
+                    <div class="title_chapter">
+                        <h2>Wstęp</h2>
+                    </div>
+                    <p class="txt_chapter">
+                       CSS, a raczej Cascading Style Sheets (Kaskadowe arkusze stylów), są nieodłącznym kompanem HTML'a.
+                       Język ten służy do opisu formy prezentacji stron WWW, czyli po prostu jego wyglądu.
+                       CSS słada się ze zbiorów zasad służących do formatowania treści. Zbudowane są one z własności oraz jej wartości.
+                    </p>
+
+                </div>
+
+                <!--START CHAPTER-->
+                <div  id="c1" class="chapter">
+                    <div class="title_chapter">
+                        <h2>Dodawanie stylów</h2>
+                    </div>
+                    <p class="txt_chapter">
+                      Istnieją 3 główne sposoby implementowania arkuszy stylów na naszej stronie, są to: styl nagłówkowy, styl wewnętrzny oraz styl lokalny.
+                      Styl nagłówkowy jak wskazuje jego nazwa, deklarujemy w sekcji <code>&lt;head&gt;</code>.
+                    </p>
+
+                    <div class="code col-12">
+                        <div class="bg_code ">
+                            <div class="spaner"> KOD</div>
+                            <div class="copy" onclick="cpy('#o1')">SKOPIUJ</div>
+                            <div class="content_code">
+                                <span class="c_item d-flex justify-content-start" id="o1">
+                            &lt; <span class="z">head</span> &gt;
+                                </span>
+                                <span class="c_item d-flex justify-content-start" id="o1">
+                            &nbsp; &lt; <span class="z">style</span> &gt;
+                                </span>
+                                <span class="c_item d-flex justify-content-start" id="o1">
+                                &nbsp; &nbsp;  <span class="k">// Tutaj wstawiamy nasze reguły CSS</span>
+                                </span>
+                                <span class="c_item d-flex justify-content-start" id="o1">
+                            &nbsp; &lt; /<span class="z">style</span> &gt;
+                                </span>
+                                <span class="c_item d-flex justify-content-start" id="o1">
+                            &lt; /<span class="z">head</span> &gt;
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="txt_chapter">
+                      Styl zewnętrznego, tutaj musimy stworzyć oddzielny plik z rozszerzeniem <code>.css</code> najczęściej nazywamy
+                      taki plik jako <code>style.css</code>. Aby podłączyć zewnętrzny arkusz musimy skorzystać z następującego znacznika.
+                    </p>
+
+                    <div class="code col-12">
+                        <div class="bg_code ">
+                            <div class="spaner"> KOD</div>
+                            <div class="copy" onclick="cpy('#o2')">SKOPIUJ</div>
+                            <div class="content_code">
+                                <span class="c_item d-flex justify-content-start" id="o2">
+                            &lt; <span class="z">head</span> &gt;
+                                </span>
+                                <span class="c_item d-flex justify-content-start" id="o2">
+                                  &lt; <span class="z">link&nbsp;</span> <span class="c">rel</span>= ” <span class="k">stylesheet</span> ” &nbsp; <span class="c">href</span>= ” <span class="k">ścieżka do pliku</span> ” &nbsp; <span class="c">type</span>= ” <span class="k">text/css</span> ”&gt;
+                                </span>
+                                <span class="c_item d-flex justify-content-start" id="o2">
+                            &lt; /<span class="z">head</span> &gt;
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="txt_chapter">
+                      Styl lokalny to styl który deklarujemy wewnątrz elementu HTML.
+                    </p>
+
+                    <div class="code col-12">
+                        <div class="bg_code ">
+                            <div class="spaner"> KOD</div>
+                            <div class="copy" onclick="cpy('#o3')">SKOPIUJ</div>
+                            <div class="content_code">
+                                <span class="c_item d-flex justify-content-start" id="o3">
+                            &lt; <span class="z">body</span> &gt;
+                                </span>
+                                <span class="c_item d-flex justify-content-start" id="o3">
+                                  &lt; <span class="z">span&nbsp;</span> <span class="c">style</span>= ” <span class="k">color:red</span> ” &gt; <span class="k">Ten tekst będzie czerwony</span> &nbsp; &lt; /<span class="z">span</span> &gt;
+                                </span>
+                                <span class="c_item d-flex justify-content-start" id="o3">
+                            &lt; /<span class="z">body</span> &gt;
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="raw col-12">
+                        <div class="bg_raw">
+                            <div class="spaner">LIVE</div>
+                            <div class="content_raw">
+                                <div class="">
+                                    <span style="color:red">Ten tekst będzie czerwony</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--         END CHAPTER-->
+                <!--START CHAPTER-->
+                <div id="c2" class="chapter">
+                    <div class="title_chapter">
+                        <h2>Selektory CSS</h2>
+                    </div>
+                    <p class="txt_chapter">
+                        Reguły CSS nie zadziałają dopóki nie przypiszemy ich do określonych elementów html, które aktualnie chcemy sformatować.
+                        Za powiązanie reguł CSS z elementami języka Html odpowiedzialne są tzw. selektory.
+                        Jest wiele sposobów tworzenia selektorów w języku CSS. Posłużą do tego m.in same elementy html oraz atrybuty <code>id</code> i <code>class</code>
+                        Selektorem może być: element html np: <code>span</code>, id elementu html np: <code>#footer</code> oraz klasa elementu np: <code>.klasa</code>
+                        Wszystkie reguły zapisujemy w nawiasach klamrowych które umieszczamy za naszym selektorem.
+                    </p>
+
+                    <div class="code col-12">
+                        <div class="bg_code ">
+                            <div class="spaner"> KOD</div>
+                            <div class="copy" onclick="cpy('#o4')">SKOPIUJ</div>
+                            <div class="content_code">
+                              <span class="c_item d-flex justify-content-start" id="o4">
+                                &lt; <span class="z">style</span> &gt;
+                              </span>
+                              <span class="c_item d-flex justify-content-start" id="o4">
+                                 &nbsp; <span class="z">span&nbsp;</span> <span class="k">{</span> &nbsp; <span class="k">Tutaj zapisujemy swoje reguły</span>&nbsp; <span class="k">}</span>
+                              </span>
+                              <span class="c_item d-flex justify-content-start" id="o4">
+                                 &nbsp; <span class="z">#footer&nbsp;</span> <span class="k">{</span> &nbsp; <span class="k">Tutaj zapisujemy swoje reguły</span>&nbsp; <span class="k">}</span>
+                              </span>
+                              <span class="c_item d-flex justify-content-start" id="o4">
+                                 &nbsp; <span class="z">.klasa&nbsp;</span> <span class="k">{</span> &nbsp; <span class="k">Tutaj zapisujemy swoje reguły</span>&nbsp; <span class="k">}</span>
+                              </span>
+                              <span class="c_item d-flex justify-content-start" id="o4">
+                                &lt; /<span class="z">style</span> &gt;
+                              </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--         END CHAPTER-->
+                <!--START CHAPTER-->
+                <div id="c3" class="chapter">
+                    <div class="title_chapter">
+                        <h2>Reguły CSS</h2>
+                    </div>
+                    <p class="txt_chapter">
+                        Na całą regułę CSS składają się 3 czynniki: selektor, własność i wartość.
+                        Przykładowa reguła która elementowi blokowemu o klasie <code>.block</code>
+                        nada wielkość 100px na 100px, zmieni kolor tła na zielony, obramowanie na kolor czarny o wielkości 1px, ustawi czcionkę Arial oraz nada
+                        jej wielkość 20px i kolor biały.
+                    </p>
+
+                    <div class="code col-12">
+                        <div class="bg_code ">
+                            <div class="spaner"> KOD</div>
+                            <div class="copy" onclick="cpy('#o5')">SKOPIUJ</div>
+                            <div class="content_code">
+                              <span class="c_item d-flex justify-content-start" id="o5">
+                                &lt; <span class="z">style</span> &gt;
+                              </span>
+                              <span class="c_item d-flex justify-content-start" id="o5">
+                                 &nbsp; <span class="z">.block&nbsp;</span> <span class="k">{</span> &nbsp;
+                                        <span class="k">
+                                            <br>
+                                            height:100px; <br>
+                                            width:100px; <br>
+                                            background-color:green; <br>
+                                            border: 1px solid black; <br>
+                                            font-family: Arial <br>
+                                            font-size: 20px; <br>
+                                            color: white; &nbsp;}<br>
+
+
+                                        </span>&nbsp;
+                              </span>
+                              <span class="c_item d-flex justify-content-start" id="o5">
+                                &lt; /<span class="z">style</span> &gt;
+                              </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="raw col-12">
+                        <div class="bg_raw">
+                            <div class="spaner">LIVE</div>
+                            <div class="content_raw">
+                                <div class="">
+                                    <div style="height:100px; width:100px; background-color:green; border: 1px solid black; font-family: Arial; font-size:20px; color:white">Testowy tekst</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--         END CHAPTER-->
+                <!--START CHAPTER-->
+                <div  id="c4"class="chapter">
+                    <div class="title_chapter">
+                        <h2>Dokumentacja CSS</h2>
+                    </div>
+                    <p class="txt_chapter">
+                        Jeżeli chcecie poznać więcej reguł CSS i ogólnie podszlifować swoją wiedzę na temat CSS'a to wejdźcie na stronę <a target="_blank" href="https://www.w3schools.com/css/">w3schools</a>
+                        tutaj znajdziecie wszystkie dostępne obecnie reguły CSS.
+
+                    </p>
+
+
+                </div>
+                <!--         END CHAPTER-->
+
+            </div>
+            <!--    END CONTENT-->
+            <div class="col-sm-3 hidden-md-down   menus " id="leftCol">
+
+                <nav class="nav flex-column"id="sidebar">
+                  <li class="spis" href="#">Spis Treści</li>
+                  <a class="nav-link" href="index.html">Kurs HTML</a>
+                  <a class="nav-link" href="podstawy.html">Podstawy</a>
+                  <a class="nav-link" href="odnosniki.html">Odsyłacze</a>
+                  <a class="nav-link" href="multimedia.html">Multimedia</a>
+                  <a class="nav-link" href="formularze.html">Formularze</a>
+                  <a class="nav-link active" href="#">CSS</a>
+                </nav>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+ <button onclick="topFunction()" id="btt">
+ TOP
+</button>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 footers">
+                <div class="footers">
+                    CREATE BY #4B3Team
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="custom.js">
+
+
+    </script>
+
+</body>
+
+</html>
