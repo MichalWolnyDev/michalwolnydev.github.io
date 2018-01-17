@@ -1,206 +1,271 @@
-<!DOCTYPE html>
 <html lang="pl">
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>KURS HTML</title>
-    <link rel="shortcut icon" href="">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href='custom.css'>
-    <link rel="stylesheet" href="respo.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="Shortcut icon" href="log_icon.png"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>MW - Junior Front-End Developer</title>
+    <script src="https://use.fontawesome.com/51f2cd1255.js"></script>
 
-    <!--[if IE]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
+<body onload="timeDelay()" onload="onHover()">
 
-<body>
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-
-                <div class="burger hidden-lg-up">
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="index.html">Kurs HTML</a>
-                        <a href="podstawy.html">Podstawy</a>
-                        <a href="odnosniki.html">Odsyłacze</a>
-                        <a href="multimedia.html">Multimedia</a>
-                        <a href="formularze.html">Formularze</a>
-                        <a href="css.html">CSS</a>
-
-
-                    </div>
-
-                </div>
-                <a class="navbar-brand" href="index.html"> KURS HTML</a>
-
-            </div>
-
-        </div>
-        <span class="burger hidden-lg-up" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-    </nav>
-
-    <div class="container">
-        <div class=" row-eq-height row ">
-
-<!--     START CONTENT -->
-            <div class="contents col-lg-9 col-xs-12 col-sm-12">
-
-
-                <div class="title">
-                    <h1>KURS HTML</h1>
-                </div>
-
-
-                <div class="content_section">
-
-                    <p class="txt">
-                        HTML jest to hipertekstowy język znaczników (HTML - Hypertext markup language). Łatwiej będzie nam zrozumieć ten termin jeżeli
-                        powiemy po prostu że jest to język komputerowy, który używamy do opisu stron internetowych. Znacznikiem jest wyrażenie umieszczone w ostrych
-                        nawiasach np <code>&lt;head&gt;</code>. Hipertekst można określić jako tekst połączony ze sobą hiperłączami (odsyłaczami/linkami). Ogólnie mówiąc chodzi
-                        o globalną sieć stron internetowych, które posiadają do siebie odsyłacze, tzw. linki.
-                    </p>
-
-                </div>
-                <div class="content_section">
-
-                    <div class="list">
-
-                        <!--             SPIS TREŚCI -->
-                        <ul>
-                            <li class="lists"><span class="c_list">1</span><a  href="podstawy.html" class="c_text">Podstawy</a></li>
-
-
-                            <ul class="underlist">
-
-                                <li><span></span>Ramy dokumentu</li>
-                                <li><span></span>Najważniejsze znaczniki w head</li>
-                                <li><span></span>Formatowanie tekstu</li>
-                                <li><span></span>Blok</li>
-
-                            </ul>
-
-                        </ul>
-                        <!--       koniec 1 działu             -->
-                          <ul>
-                            <li class="lists"><span class="c_list">2</span><a  href="odnosniki.html" class="c_text">Odsyłacze</a></li>
-
-                            <ul class="underlist">
-
-                                <li><span></span>Odsyłacze do podstrony</li>
-                                <li><span></span>Odsyłacze do kotwic</li>
-                                <li><span></span>Odsyłacz pocztowy</li>
-
-
-                            </ul>
-
-                        </ul>
-                        <!--       koniec 2 działu             -->
-                          <ul>
-                            <li class="lists"><span class="c_list">3</span><a  href="multimedia.html" class="c_text">Multimedia</a></li>
-
-                            <ul class="underlist">
-
-                                <li><span></span>Obrazy</li>
-                                <li><span></span>Video</li>
-
-
-                            </ul>
-
-                        </ul>
-                        <!--       koniec 3 działu             -->
-                          <ul>
-                            <li class="lists"><span class="c_list">4</span><a  href="formularze.html" class="c_text">Formularze</a></li>
-
-                            <ul class="underlist">
-
-                              <li><span></span>Input</li>
-                              <li><span></span>Input type radio</li>
-                              <li><span></span>Input type checkbox</li>
-                              <li><span></span>Textarea</li>
-                              <li><span></span>Select</li>
-                              <li><span></span>Formularz</li>
-
-
-                            </ul>
-
-                        </ul>
-                        <!--       koniec 4 działu             -->
-                          <ul>
-                            <li class="lists"><span class="c_list">5</span><a  href="css.html" class="c_text">CSS</a></li>
-
-                            <ul class="underlist">
-
-                              <li><span></span>Dodawanie stylów</li>
-                              <li><span></span>Selektory CSS</li>
-                              <li><span></span>Reguły CSS</li>
-                              <li><span></span>Dokumentacja CSS</li>
-
-
-                            </ul>
-
-                        </ul>
-                        <!--       koniec 5 działu             -->
-
-                    </div>
-                </div>
-
-            </div>
-                        <!--    END CONTENT-->
-            <div class="col-sm-3 hidden-md-down   menus">
-
-                <nav class="nav flex-column">
-                    <li class="spis" href="#">Spis Treści</li>
-                    <a class="nav-link active" href="#">Kurs HTML</a>
-                    <a class="nav-link" href="podstawy.html">Podstawy</a>
-                    <a class="nav-link" href="odnosniki.html">Odsyłacze</a>
-                    <a class="nav-link" href="multimedia.html">Multimedia</a>
-                    <a class="nav-link" href="formularze.html">Formularze</a>
-                    <a class="nav-link" href="css.html">CSS</a>
-
-
-                </nav>
-
-
-            </div>
-        </div>
+    <div class="loader">
+    <div class="logo">
+        <img src="log_lep.png">
+        <div class="bar"></div>
     </div>
-    <div class="clearfix"></div>
-     <button onclick="topFunction()" id="btt">
-TOP
-</button>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 footers">
-                <div class="footers">
-                    CREATE BY #4B3Team
-                </div>
+    </div>
+    <div style="display:none" class="container animate">
+
+        <header>
+
+            <div class="empty"></div>
+            <div class="rect ">
+                <span class="textFormat">MICHAŁ WOLNY<sub>Junior Front-End Developer</sub></span>
+                <div class="circle"><img src="log_lep.png"></div>
+
+                <button onclick="scroller('.content')" class="btn1" type="button">Dowiedz się więcej</button>
+            </div>
+
+        </header>
+
+        <div class="head_rwd ">
+
+            <img src="log_lep.png">
+            <span class="textFormat">MICHAŁ WOLNY</span>
+
+
+
+        </div>
+
+      <div class="content ">
+
+
+            <a href="#openWindow"><div class="square " >
+                <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                <span class="hide">O mnie</span>
+            </div></a>
+            <div class="square ">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <span class="hide">GitHub</span>
+            </div>
+            <div class="square ">
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+                <span class="hide">Projekty</span>
+            </div>
+
+            <div class="square ">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="hide">Kontakt</span>
+            </div>
+            <div class="square ">
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+                <span class="hide">Umiejetnosci</span>
+            </div>
+
+
+        <div id="openWindow" class="Window">
+            <div>
+            <a href="#close" title="Zamknij" class="close">X</a>
+
+
             </div>
         </div>
+      </div>
+
+
+        <footer>
+
+            <div class="social">
+              <div class="social_text ">
+                <span>Sprawdz moje social media!</span>
+              </div>
+                <div class="sm_flex ">
+                  <div class="sm"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                  <div class="sm"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                  <div class="sm"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                  <div class="sm"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
+                </div>
+            </div>
+            <div class="foot">
+              <div class="foot_cnt ">
+                <div class="quote ">
+                  <table class="nav ">
+                    <tr>
+                      <th class="nav_fl" >Info</th>
+                      <th class="nav_fl" >Social</th>
+                      <th class="nav_fl" >Test</th>
+                    </tr>
+                    <tr>
+                      <td class="td_format">
+                        <ul class="list_format">
+                          <li>O mnie</li>
+                          <li>Projekty</li>
+                          <li>Github</li>
+                          <li>Umiejetnosci</li>
+                          <li>Kontakt</li>
+                        </ul>
+                      </td>
+                      <td class="td_format">
+                        <ul class="list_format">
+                          <li>Facebook</li>
+                          <li>Instagram</li>
+                          <li>LinkedIn</li>
+                          <li>Goldenline</li>
+                          <li>Youtube</li>
+                        </ul>
+                      </td>
+                      <td class="td_format">
+                        <ul class="list_format">
+                          <li>O mnie</li>
+                          <li>Projekty</li>
+                          <li>Github</li>
+                          <li>Umiejetnosci</li>
+                          <li>Kontakt</li>
+                        </ul>
+                      </td>
+                    </tr>
+
+                  </table>
+
+                </div>
+                <div class="form">
+                    <form method="POST" class="form_inside">
+
+                    <input class="form_format" type="email" name="e-mail" placeholder="Podaj swój e-mail"><br>
+                    <input class="form_format" type="text" name="temat" placeholder="Temat"><br>
+                    <br><br>
+                    <textarea class="form_format" name="tresc" placeholder="Tresc..."></textarea><br>
+                    <input class="form_format sbt_hov" type="submit">
+
+                    </form>
+                </div>
+              </div>
+              <div class="copyright"><p>&copy; MWDev - Michał Wolny 2017-2018</p></div>
+
+            </div>
+
+
+
+
+        </footer>
+
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "100%";
-        }
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
+            <script>
+            var delay;
 
-    </script>
+            function timeDelay(){
+                delay = setTimeout(shPage,3000);
+            }
+                function shPage(){
+                    document.querySelector(".loader").style.display = "none";
+                    document.querySelector(".container").style.display = "flex";
+                }
+
+            </script>
+
+            <script>
+
+            var marginY = 0;
+            var dest = 0; //cel, wartosc do ktorej ma sie zeskrolowac, punkt xy diva
+            var speed = 15; //ile px ma sie przesuwac
+            var scrolling = null;
+
+
+                function scroller(eId){
+
+                    dest = document.querySelector(eId).offsetTop;
+
+                    scrolling = setTimeout(function(){
+                        scroller(eId);
+                    },1);
+
+                    marginY += speed;
+
+                        //console.log(marginY);
+                        console.log(dest);
+                    if(marginY >= dest){
+                        clearTimeout(scrolling);
+                    }
+
+                    window.scroll(0,marginY);
+
+
+                }console.log(dest);
+
+            </script>
+
+           <!-- <script>
+
+
+         /*    div.style.transition = "transition: background 0.5s ease-in;";
+                div.style.backgroundColor = "#D2691E";*/
+            function onHover(id1,id2){
+
+                 let div = document.getElementById(id1);
+                    let div2 = document.getElementById(id2);
+                div.style.transition = "background 0.5s ease-in";
+                div.style.backgroundColor = "#D2691E";
+                if(div.style.display == "block"){
+
+
+                    div.style.display = "none";
+
+                    div2.style.display = "block";
+
+
+
+                }
+                else{
+                    div.style.display = "block";
+                    div2.style.display = "none";
+                }
+
+            }
+
+
+
+
+
+
+            </script>-->
+    <!--        <script>
+
+
+               /*    div.style.transition = "transition: background 0.5s ease-in;";
+                div.style.backgroundColor = "#D2691E";*/
+            function onHover(id1,id2){
+
+                 let div = document.getElementById(id1);
+                    let div2 = document.getElementById(id2);
+                div.style.transition = "background 0.5s ease-in";
+                div.style.backgroundColor = "#D2691E";
+                if(div.style.display == "block"){
+
+
+                    div.style.display = "none";
+
+                    div2.style.display = "block";
+
+
+
+                }
+                else{
+                    div.style.display = "block";
+                    div2.style.display = "none";
+                }
+
+            }
+
+
+
+
+
+            </script>-->
 
 </body>
-
 </html>
