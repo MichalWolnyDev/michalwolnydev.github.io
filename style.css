@@ -1,3 +1,8 @@
+body{
+  background:#110f0f;
+  color:white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .headBg{
     background: #000;
 }
@@ -26,7 +31,6 @@
   z-index:10;
   font-size:96px;
   color:white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing:10px;
 
@@ -38,8 +42,82 @@
   z-index:10;
   font-size:62px;
   color:white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing:5px;
+
+}
+.secSection{
+  display:flex !important;
+  flex-direction:column;
+  flex-wrap:wrap;
+}
+.hello{
+  height:30vh;
+}
+.hello .welcome{
+  font-size:54px;
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  padding:1rem;
+}
+.hello > hr{
+  border: 0;
+   height: 1px;
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+   border-color: white;
+}
+.hello > p{
+  padding:2rem;
+  font-size:16px;
+  text-align:center;
+}
+.infoTables{
+  display:flex;
+  height:70vh;
+
+}
+.infoTables img{
+  border-radius:50%;
+  width:15rem;
+  position: absolute;
+  margin-top:1rem;
+  /*box-shadow:0px 0px 35px grey;*/
+
+}
+.infoTables span{
+  font-size:24px;
+  padding: 1rem;
+}
+.projekt{
+  flex:1;
+  display: flex;
+  flex-direction:column;
+}
+.secSectionImg{
+  height:50%;
+  /*background: white;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projektTitle{
+  /*background:red;*/
+  height:50%;
+  display: flex;
+  justify-content: center;
+}
+
+.lakier{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+.wyprawki{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+.sliderContent{
 
 }
