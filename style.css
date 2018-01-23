@@ -1,6 +1,6 @@
 body{
   background:#110f0f;
-  color:white;
+  color:#A0A0A0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .headBg{
@@ -46,11 +46,7 @@ body{
   letter-spacing:5px;
 
 }
-.secSection{
-  display:flex !important;
-  flex-direction:column;
-  flex-wrap:wrap;
-}
+
 .hello{
   height:30vh;
 }
@@ -72,35 +68,63 @@ body{
   font-size:16px;
   text-align:center;
 }
-.infoTables{
+.secSectionContent{
   display:flex;
-  height:70vh;
+  flex-wrap:wrap;
+  align-items: stretch;
+  flex:1;
+  height:100%;
 
 }
-.infoTables img{
+
+.secSectionContent img{
   border-radius:50%;
   width:15rem;
-  position: absolute;
-  margin-top:1rem;
-  /*box-shadow:0px 0px 35px grey;*/
+  margin-top:5rem;
+  box-shadow:0px 0px 1px #A0A0A0;
+  transition: all .5s ease-in-out;
 
 }
-.infoTables span{
+.secSectionContent img:hover{
+  transform: scale(0.9);
+}
+.secSectionContent span{
   font-size:24px;
   padding: 1rem;
+  margin-top:1rem;
+
 }
-.projekt{
-  flex:1;
-  display: flex;
-  flex-direction:column;
+
+.secSection{
+  display:flex !important;
+  /*flex-flow: row wrap;*/
+
 }
+
 .secSectionImg{
-  height:50%;
+  height: 100vh;
   /*background: white;*/
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+.secSectionTxt{
+  padding:30px;
+  text-align: center;
+  font-size:16px;
+  line-height: 2;
+}
+
+.projekt{
+  flex:1;
+}
+.lakier{
+  flex:1;
+}
+.wyprawki{
+  flex:1;
+}
+
 .projektTitle{
   /*background:red;*/
   height:50%;
@@ -108,16 +132,12 @@ body{
   justify-content: center;
 }
 
-.lakier{
-  flex:1;
-  display: flex;
-  flex-direction: column;
-}
-.wyprawki{
-  flex:1;
-  display: flex;
-  flex-direction: column;
-}
 .sliderContent{
 
+}
+@media screen and (max-width:600px){
+  .secSectionContent img{
+    width:10rem;
+    margin-top:1rem;
+  }
 }
