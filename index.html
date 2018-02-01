@@ -13,14 +13,23 @@
 <body>
 
 
+  <ul id="myMenu" class="menu">
+    <li data-menuanchor="firstPage" class="active testList"><a href="#firstPage"><div class="testmenu"><p class="testMenu1">HOME</p></div></a></li>
+    <li data-menuanchor="secondPage" class="testList"><a href="#secondPage"><div class="testmenu"></div></a></li>
+    <li data-menuanchor="thirdPage" class="testList"><a href="#thirdPage"><div class="testmenu"></div></a></li>
+    <li data-menuanchor="fourthPage" class="testList"><a href="#fourthPage"><div class="testmenu"></div></a></li>
+    <li data-menuanchor="fifthPage" class="testList"><a href="#fifthPage"><div class="testmenu"></div></a></li>
+  </ul>
+
 
     <div id="wrapper">
-    	<div class="section headBg ">
+    	<div class="section headBg " data-anchor="firstPage">
         <span class="headText"><span>Mirart</span></span>
         <span class="headTextSec">LAKIERNICTWO ARTYSTYCZNE</span>
+
       </div>
 
-    	<div class="section secSection fp-noscroll ">
+    	<div class="section secSection fp-noscroll " data-anchor="secondPage">
 
         <div class="secSectionContent ">
 
@@ -60,10 +69,20 @@
         </div>
       </div>
 
-    	<div class="section sliderContent ">
+    	<div class="section sliderContent " data-anchor="thirdPage">
           <div class="slide" data-anchor="slide1">
               <div class="leftBar" >
-
+                <h3>Temat</h3>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique justo vitae molestie mattis.
+                  Integer pulvinar risus diam, nec fringilla augue iaculis vulputate. Maecenas quam tellus, pretium a nisl id,
+                  tempus pulvinar leo. Mauris venenatis nunc mi. Sed iaculis elit ut augue placerat, sit amet luctus ligula
+                  accumsan. Donec cursus dolor eget metus tempor, quis venenatis leo lobortis. Donec bibendum rhoncus ligula
+                  nec fermentum. Sed nibh dui, pharetra nec odio vel, ultricies rutrum lectus. Aliquam in blandit urna, non
+                  tincidunt nibh.
+                  In fermentum feugiat sem. Integer ullamcorper purus ut fringilla ultricies. Curabitur eget magna faucibus,
+                  molestie lacus sit amet, convallis erat. Curabitur vel est mauris. Pellentesque nec nisl felis. Suspendisse sit
+                </p>
               </div>
               <div class="photos">
                   <div class="photosTest">
@@ -82,7 +101,17 @@
           </div>
           <div class="slide" data-anchor="slide1">
             <div class="leftBar" >
-
+              <h3>Temat</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique justo vitae molestie mattis.
+                Integer pulvinar risus diam, nec fringilla augue iaculis vulputate. Maecenas quam tellus, pretium a nisl id,
+                tempus pulvinar leo. Mauris venenatis nunc mi. Sed iaculis elit ut augue placerat, sit amet luctus ligula
+                accumsan. Donec cursus dolor eget metus tempor, quis venenatis leo lobortis. Donec bibendum rhoncus ligula
+                nec fermentum. Sed nibh dui, pharetra nec odio vel, ultricies rutrum lectus. Aliquam in blandit urna, non
+                tincidunt nibh.
+                In fermentum feugiat sem. Integer ullamcorper purus ut fringilla ultricies. Curabitur eget magna faucibus,
+                molestie lacus sit amet, convallis erat. Curabitur vel est mauris. Pellentesque nec nisl felis. Suspendisse sit
+              </p>
             </div>
             <div class="photos">
                 <div class="photosTest">
@@ -99,7 +128,17 @@
           </div>
           <div class="slide" data-anchor="slide1">
             <div class="leftBar" >
-
+              <h3>Temat</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique justo vitae molestie mattis.
+                Integer pulvinar risus diam, nec fringilla augue iaculis vulputate. Maecenas quam tellus, pretium a nisl id,
+                tempus pulvinar leo. Mauris venenatis nunc mi. Sed iaculis elit ut augue placerat, sit amet luctus ligula
+                accumsan. Donec cursus dolor eget metus tempor, quis venenatis leo lobortis. Donec bibendum rhoncus ligula
+                nec fermentum. Sed nibh dui, pharetra nec odio vel, ultricies rutrum lectus. Aliquam in blandit urna, non
+                tincidunt nibh.
+                In fermentum feugiat sem. Integer ullamcorper purus ut fringilla ultricies. Curabitur eget magna faucibus,
+                molestie lacus sit amet, convallis erat. Curabitur vel est mauris. Pellentesque nec nisl felis. Suspendisse sit
+              </p>
             </div>
             <div class="photos">
                 <div class="photosTest">
@@ -116,8 +155,14 @@
           </div>
       </div>
 
-    	<div class="section">Some section</div>
-    	<div class="section">Some section</div>
+    	<div class="section" data-anchor="fourthPage">Some section</div>
+    	<div class="section footer" data-anchor="fifthPage">
+        <div class="footerL"></div>
+        <div class="footerR">
+
+        </div>
+
+      </div>
     </div>
 
 
@@ -131,6 +176,11 @@
   <script>
       $(document).ready(function() {
         $('#wrapper').fullpage();
+      });
+
+      $('#fullpage').fullpage({
+      	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+      	menu: '#myMenu'
       });
   </script>
 </body>
