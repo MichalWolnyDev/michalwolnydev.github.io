@@ -197,30 +197,8 @@ body{
   float:left;
 }
 
-.menu{
-  display: flex;
-  flex-direction: column;
-  position:fixed;
-  margin:0;
-  padding:0;
-  left:10px;
 
-  list-style-type: none;
-  z-index:70;
-}
-.testmenu{
 
-  border-radius:50%;
-  height:30px;
-  width:30px;
-  background-color:red;
-}
-.testMenu1{
-
-}
-.testList{
-  margin-bottom:5px;
-}
 @media screen and (max-width:600px){
   .secSectionContent img{
     width:10rem;

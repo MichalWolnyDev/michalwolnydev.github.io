@@ -11,15 +11,10 @@
 
 </head>
 <body>
+  <script src="https://use.fontawesome.com/51f2cd1255.js"></script>
 
 
-  <ul id="myMenu" class="menu">
-    <li data-menuanchor="firstPage" class="active testList"><a href="#firstPage"><div class="testmenu"><p class="testMenu1">HOME</p></div></a></li>
-    <li data-menuanchor="secondPage" class="testList"><a href="#secondPage"><div class="testmenu"></div></a></li>
-    <li data-menuanchor="thirdPage" class="testList"><a href="#thirdPage"><div class="testmenu"></div></a></li>
-    <li data-menuanchor="fourthPage" class="testList"><a href="#fourthPage"><div class="testmenu"></div></a></li>
-    <li data-menuanchor="fifthPage" class="testList"><a href="#fifthPage"><div class="testmenu"></div></a></li>
-  </ul>
+
 
 
     <div id="wrapper">
@@ -168,20 +163,27 @@
 
 
 
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="fullPage/vendors/jquery.easings.min.js"></script>
   <script type="text/javascript" src="fullPage/vendors/scrolloverflow.min.js"></script>
   <script type="text/javascript" src="fullPage/jquery.fullPage.js"></script>
   <script>
       $(document).ready(function() {
-        $('#wrapper').fullpage();
+        $('#wrapper').fullpage({
+          anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+          menu: '#myMenu',
+          slidesNavPosition: 'bottom',
+          navigation: true,
+          navigationTooltips: ['Home','Info','Galeria','test','test'],
+          css3:true
+        });
+
       });
 
-      $('#fullpage').fullpage({
-      	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-      	menu: '#myMenu'
-      });
+
   </script>
+
+
+
 </body>
 </html>
