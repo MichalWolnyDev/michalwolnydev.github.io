@@ -177,6 +177,9 @@ body{
   max-width:30vw;
   height:30vh;
 }
+.photos img:hover{
+  cursor: pointer;
+}
 .footer{
   display:flex !important;
   flex-flow:row wrap;
@@ -198,7 +201,7 @@ body{
 }
 
 
-
+.galleria{ max-width: 700px; height: 400px; background: #000 }
 @media screen and (max-width:600px){
   .secSectionContent img{
     width:10rem;
