@@ -32,8 +32,9 @@
   overflow: auto;
   background-color:black;
   animation-name: animatetop;
-  animation-duration: 1.4s;
+  animation-duration: 0.8s;
   animation-timing-function: ease-in-out;
+
 }
 
 /*modal ctn*/
@@ -119,16 +120,22 @@
 .demo{
     height:70%;
     width: 100%;
+    transition: transform .2s ease-in-out;
 }
 .img.demo{
   opacity: 0.6;
+
 
 }
 
 .active, .demo:hover{
   opacity: 1;
-}
 
+}
+.demo:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+}
 img.hover-shadow{
   transition: 0.3s;
 }
