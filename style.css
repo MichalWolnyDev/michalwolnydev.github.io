@@ -35,13 +35,11 @@ body{
   font-size:96px;
   color:white;
   font-weight: bold;
-
 }
-.headText > span::first-letter{
-  font-size:150%;
-  background:#800000;
-
+.headText > img{
+  height:170px;
 }
+
 .headTextSec{
   display: flex;
   justify-content: center;
@@ -179,11 +177,11 @@ body{
   margin:2px;
   max-width:30vw;
   height:30vh;
-  transition: transform .3s ease-in-out;
+  transition: filter .3s ease-in-out;
 }
 .photos img:hover{
   cursor: pointer;
-  transform:scale(1.1);
+  filter: grayscale(50%);
 }
 .footer{
   display:flex !important;
