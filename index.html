@@ -15,23 +15,22 @@
 </head>
 <body>
   <script src="https://use.fontawesome.com/51f2cd1255.js"></script>
-
-
-
-
-
+    <!-- START SITE -->
     <div id="wrapper">
+      <!-- START HEADER -->
     	<div class="section headBg headBgImg " data-anchor="firstPage">
         <div class="headText"><img src="img/logotyp_bial.svg"></div>
         <span class="headTextSec">LAKIERNICTWO ARTYSTYCZNE</span>
 
       </div>
+      <!-- END HEADER -->
 
+      <!-- START OFFER -->
     	<div class="section secSection fp-noscroll fp-auto-height-responsive" data-anchor="secondPage">
         <div class="offerTop"><span>Oferta</span></div>
         <div class="secSectionContent ">
 
-          <div class="projekt">
+          <div class="col">
             <div class="secSectionImg ">
               <img src="img/of1.jpg">
               <span>PROJEKTOWANIE</span>
@@ -43,7 +42,7 @@
             </div>
           </div>
 
-          <div class="lakier">
+          <div class="col">
             <div class="secSectionImg ">
               <img src="img/of2.jpg">
               <span>LAKIEROWANIE</span>
@@ -54,7 +53,7 @@
             </div>
           </div>
 
-          <div class="wyprawki">
+          <div class="col">
             <div class="secSectionImg">
               <img src="img/of3.jpg">
               <span >WYPRAWKI LAKIERNICZE</span>
@@ -66,7 +65,9 @@
 
         </div>
       </div>
+      <!-- END OFFER -->
 
+      <!-- START GALLERY -->
     	<div class="section sliderContent fp-auto-height-responsive" data-anchor="thirdPage">
           <div class="slide" data-anchor="slide1">
               <div class="leftBar" >
@@ -82,8 +83,8 @@
                   molestie lacus sit amet, convallis erat. Curabitur vel est mauris. Pellentesque nec nisl felis. Suspendisse sit
                 </p>
               </div>
-              <div class="photos">
-                  <div class="photosTest">
+              <div class="photosBox">
+                  <div class="photos">
 
 
                   <img onclick="openModal();currentSlide(1)" class="test" src="img/011.jpg">
@@ -113,8 +114,8 @@
                 molestie lacus sit amet, convallis erat. Curabitur vel est mauris. Pellentesque nec nisl felis. Suspendisse sit
               </p>
             </div>
-            <div class="photos">
-                <div class="photosTest">
+            <div class="photosBox">
+                <div class="photos">
                   <img onclick="openModal();currentSlide(1)" class="test" src="img/011.jpg">
                   <img onclick="openModal();currentSlide(2)" class="test" src="img/012.jpg">
                   <img onclick="openModal();currentSlide(3)" class="test" src="img/013.jpg">
@@ -140,8 +141,8 @@
                 molestie lacus sit amet, convallis erat. Curabitur vel est mauris. Pellentesque nec nisl felis. Suspendisse sit
               </p>
             </div>
-            <div class="photos">
-                <div class="photosTest">
+            <div class="photosBox">
+                <div class="photos">
                   <img onclick="openModal();currentSlide(1)" class="test" src="img/011.jpg">
                   <img onclick="openModal();currentSlide(2)" class="test" src="img/012.jpg">
                   <img onclick="openModal();currentSlide(3)" class="test" src="img/013.jpg">
@@ -155,8 +156,10 @@
 
           </div>
       </div>
+      <!-- END GALLERY -->
 
-    	<div class="section  offer fp-auto-height-responsive" data-anchor="fourthPage"><!--headBg-->
+      <!-- START OFFER_2 -->
+    	<div class="section offer fp-auto-height-responsive" data-anchor="fourthPage"><!--headBg-->
 
           <div class="offerTop">
               <span>Asortyment</span>
@@ -203,6 +206,10 @@
 
 
       </div>
+      <!-- END OFFER_2 -->
+
+      <!-- START FOOTER -->
+
     	<div class="section footer fp-auto-height-responsive" data-anchor="fifthPage">
         <div class="footerL">
           <blockquote>Nasza praca to nie siedzenie za
@@ -213,22 +220,59 @@
           <div class="footerRContainer">
             <div class="f">
               <div class="f1">
-                <div class="f_title">
-                  Firma
+                <div>
+                <a href="#"><img src="img/logotyp_bial.svg"></a>
+                <div class="vcard">
+                  <p>
+                    <span class="org">Studio lakiernicze</span>
+                    -
+                    <span class="fn">Mirian Heinrich</span>
+                  <br>
+                    <span class="adr">
+                      <span class="street-address">Poznańska 10</span>,
+                      <span class="postal-code">00-000</span>
+                      <span class="locality"><strong>Wielkopolska</strong></span>
+                      <br>
+                      <span class="phone">
+                        <span class="type">tel.</span>
+                        <a class="value" href="tel:333333333">333 333 333</a>
+                      </span>
+
+                    </span>
+                  <br>
+                  e-mail:
+                    <a class="email" href="mailto:test@o2.pl">test@o2.pl</a>
+                  </p>
                 </div>
+              </div>
+              </div>
+              <div class="f1">
+                <h2>Mapa serwisu</h2>
                 <ul class="f_list">
-                  <li>Test</li>
-                  <li>Test</li>
-                  <li>Test</li>
-                  <li>Test</li>
-                  <li>Test</li>
+                  <li data-menuanchor="firstPage"><a href="#firstPage">Strona główna</a></li>
+                  <li data-menuanchor="secondPage"><a href="#secondPage">Oferta</a></li>
+                  <li data-menuanchor="thirdPage"><a href="#thirdPage">Galeria</a></li>
+                  <li data-menuanchor="fourthPage"><a href="#fourthPage">Asortyment</a></li>
+                  <li data-menuanchor="lastPage"><a href="#lastPage">Kontakt</a></li>
                 </ul>
               </div>
               <div class="f1">
-                <div class="f_title">Firma</div>
-              </div>
-              <div class="f1">
-                <div class="f_title">Firma</div>
+                <h2>Ostatnie realizacje</h2>
+                <div class="last">
+                  <div class="rw">
+                    <div class="a"><a href="img/011.jpg" target="_blank"><img src="img/011.jpg"></a></div>
+                    <div class="a"><a href="img/012.jpg" target="_blank"><img src="img/012.jpg"></a></div>
+                  </div>
+                  <div class="rw">
+                    <div class="a"><a href="img/013.jpg" target="_blank"><img src="img/013.jpg"></a></div>
+                    <div class="a"><a href="img/014.jpg" target="_blank"><img src="img/014.jpg"></a></div>
+                  </div>
+
+                <!--  <a href="img/011.jpg" target="_blank"><img src="img/011.jpg"></a>
+                  <a href="img/011.jpg" target="_blank"><img src="img/011.jpg"></a>
+                  <a href="img/011.jpg" target="_blank"><img src="img/011.jpg"></a>
+                  <a href="img/011.jpg" target="_blank"><img src="img/011.jpg"></a>-->
+                </div>
               </div>
             </div>
             <div class="f2">
@@ -245,36 +289,39 @@
         </div>
 
       </div>
+      <!-- END FOOTER -->
     </div>
+    <!-- END SITE -->
 
+    <!-- GALLERY -->
     <div id="myModal" class="modal">
 
       <div class="modal-content">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="mySlides" ondblclick="closeModal()">
           <div class="numbertext">1 / 4</div>
-          <img src="img/011.jpg" style="width:100%">
+          <img src="img/011.jpg" style="width:100%" alt="">
         </div>
 
         <div class="mySlides" ondblclick="closeModal()">
           <div class="numbertext">2 / 4</div>
-          <img src="img/012.jpg" style="width:100%">
+          <img src="img/012.jpg" style="width:100%" alt="">
         </div>
         <div class="mySlides" ondblclick="closeModal()">
           <div class="numbertext">3 / 4</div>
-          <img src="img/013.jpg" style="width:100%">
+          <img src="img/013.jpg" style="width:100%" alt="">
         </div>
         <div class="mySlides" ondblclick="closeModal()">
           <div class="numbertext">4 / 6</div>
-          <img src="img/014.jpg" style="width:100%">
+          <img src="img/014.jpg" style="width:100%" alt="">
         </div>
         <div class="mySlides" ondblclick="closeModal()">
           <div class="numbertext">5 / 6</div>
-          <img src="img/015.jpg" style="width:100%">
+          <img src="img/015.jpg" style="width:100%" alt="">
         </div>
         <div class="mySlides" ondblclick="closeModal()">
           <div class="numbertext">6 / 6</div>
-          <img src="img/016.jpg" style="width:100%">
+          <img src="img/016.jpg" style="width:100%" alt="">
         </div>
         <div class="caption-container">
           <p id="caption"></p>
@@ -306,7 +353,7 @@
       </div>
     </div>
     </div>
-
+    <!-- END OF GALLERY -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="fullPage/vendors/jquery.easings.min.js"></script>
@@ -331,55 +378,55 @@
       });
   </script>
 <script>
-var modal = document.getElementById("myModal");
+  var modal = document.getElementById("myModal");
 
 
-function openModal(){
-  modal.style.display = "block";
-}
-
-function closeModal(){
-  modal.style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-//next,prev
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n){
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n){
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText  = document.getElementById("caption");
-  var sLength = slides.length;
-  var dLength = dots.length;
-
-  if(n > slides.length){
-    slideIndex = 1;
+  function openModal(){
+    modal.style.display = "block";
   }
 
-  if(n < 1){
-    slideIndex = sLength;
+  function closeModal(){
+    modal.style.display = "none";
   }
 
-  for(i = 0; i < sLength; i++){
-    slides[i].style.display = "none";
-
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  //next,prev
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
-  for(i = 0; i < dLength; i++){
-    dots[i].className = dots[i].className.replace(" active", "");
+
+  function currentSlide(n){
+    showSlides(slideIndex = n);
   }
 
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
+  function showSlides(n){
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText  = document.getElementById("caption");
+    var sLength = slides.length;
+    var dLength = dots.length;
+
+    if(n > slides.length){
+      slideIndex = 1;
+    }
+
+    if(n < 1){
+      slideIndex = sLength;
+    }
+
+    for(i = 0; i < sLength; i++){
+      slides[i].style.display = "none";
+
+    }
+    for(i = 0; i < dLength; i++){
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
 </script>
