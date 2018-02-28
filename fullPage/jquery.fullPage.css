@@ -79,6 +79,20 @@ html.fp-enabled,
     /*border-width: 38.5px 0 38.5px 34px;*/
     border-color: transparent transparent transparent #fff;
 }
+@media screen and (max-width:450px){
+  .fp-controlArrow.fp-prev{
+    left:1%;
+  }
+  .fp-controlArrow.fp-next{
+    right:1%;
+  }
+  .fp-controlArrow{
+    top:50%;
+  }
+  .fp-slidesContainer{
+    height: 100vh;
+  }
+}
 .fp-scrollable {
     overflow: hidden;
     position: relative;
