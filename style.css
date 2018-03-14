@@ -81,7 +81,9 @@ body{
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-wrap:wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: stretch;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -176,6 +178,8 @@ body{
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap:wrap;
   flex-direction: row;
   align-items:center;
@@ -241,7 +245,9 @@ p.mobile{
 
 .offerBot{
   height:80%;
-  flex-wrap:wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -455,6 +461,8 @@ p.mobile{
   display: flex;
   flex-direction: row;
   height: 90%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap:wrap;
 }
 
@@ -570,6 +578,8 @@ p.mobile{
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap:wrap;
   flex-direction: row;
 }
