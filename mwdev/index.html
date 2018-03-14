@@ -1,0 +1,271 @@
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut icon" href="log_icon.png"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>MW - Junior Front-End Developer</title>
+    <script src="https://use.fontawesome.com/51f2cd1255.js"></script>
+
+</head>
+<body onload="timeDelay()" onload="onHover()">
+
+    <div class="loader">
+    <div class="logo">
+        <img src="log_lep.png">
+        <div class="bar"></div>
+    </div>
+
+    </div>
+    <div style="display:none" class="container animate">
+
+        <header>
+
+            <div class="empty"></div>
+            <div class="rect ">
+                <span class="textFormat">MICHAŁ WOLNY<sub>Junior Front-End Developer</sub></span>
+                <div class="circle"><img src="log_lep.png"></div>
+
+                <button onclick="scroller('.content')" class="btn1" type="button">Dowiedz się więcej</button>
+            </div>
+
+        </header>
+
+        <div class="head_rwd ">
+
+            <img src="log_lep.png">
+            <span class="textFormat">MICHAŁ WOLNY</span>
+
+
+
+        </div>
+
+      <div class="content ">
+
+
+            <a href="#openWindow"><div class="square " >
+                <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                <span class="hide">O mnie</span>
+            </div></a>
+            <div class="square ">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <span class="hide">GitHub</span>
+            </div>
+            <div class="square ">
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+                <span class="hide">Projekty</span>
+            </div>
+
+            <div class="square ">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="hide">Kontakt</span>
+            </div>
+            <div class="square ">
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+                <span class="hide">Umiejetnosci</span>
+            </div>
+
+
+        <div id="openWindow" class="Window">
+            <div>
+            <a href="#close" title="Zamknij" class="close">X</a>
+
+
+            </div>
+        </div>
+      </div>
+
+
+        <footer>
+
+            <div class="social">
+              <div class="social_text ">
+                <span>Sprawdz moje social media!</span>
+              </div>
+                <div class="sm_flex ">
+                  <div class="sm"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                  <div class="sm"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                  <div class="sm"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                  <div class="sm"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
+                </div>
+            </div>
+            <div class="foot">
+              <div class="foot_cnt ">
+                <div class="quote ">
+                  <table class="nav ">
+                    <tr>
+                      <th class="nav_fl" >Info</th>
+                      <th class="nav_fl" >Social</th>
+                      <th class="nav_fl" >Test</th>
+                    </tr>
+                    <tr>
+                      <td class="td_format">
+                        <ul class="list_format">
+                          <li>O mnie</li>
+                          <li>Projekty</li>
+                          <li>Github</li>
+                          <li>Umiejetnosci</li>
+                          <li>Kontakt</li>
+                        </ul>
+                      </td>
+                      <td class="td_format">
+                        <ul class="list_format">
+                          <li>Facebook</li>
+                          <li>Instagram</li>
+                          <li>LinkedIn</li>
+                          <li>Goldenline</li>
+                          <li>Youtube</li>
+                        </ul>
+                      </td>
+                      <td class="td_format">
+                        <ul class="list_format">
+                          <li>O mnie</li>
+                          <li>Projekty</li>
+                          <li>Github</li>
+                          <li>Umiejetnosci</li>
+                          <li>Kontakt</li>
+                        </ul>
+                      </td>
+                    </tr>
+
+                  </table>
+
+                </div>
+                <div class="form">
+                    <form method="POST" class="form_inside">
+
+                    <input class="form_format" type="email" name="e-mail" placeholder="Podaj swój e-mail"><br>
+                    <input class="form_format" type="text" name="temat" placeholder="Temat"><br>
+                    <br><br>
+                    <textarea class="form_format" name="tresc" placeholder="Tresc..."></textarea><br>
+                    <input class="form_format sbt_hov" type="submit">
+
+                    </form>
+                </div>
+              </div>
+              <div class="copyright"><p>&copy; MWDev - Michał Wolny 2017-2018</p></div>
+
+            </div>
+
+
+
+
+        </footer>
+
+    </div>
+
+
+            <script>
+            var delay;
+
+            function timeDelay(){
+                delay = setTimeout(shPage,3000);
+            }
+                function shPage(){
+                    document.querySelector(".loader").style.display = "none";
+                    document.querySelector(".container").style.display = "flex";
+                }
+
+            </script>
+
+            <script>
+
+            var marginY = 0;
+            var dest = 0; //cel, wartosc do ktorej ma sie zeskrolowac, punkt xy diva
+            var speed = 15; //ile px ma sie przesuwac
+            var scrolling = null;
+
+
+                function scroller(eId){
+
+                    dest = document.querySelector(eId).offsetTop;
+
+                    scrolling = setTimeout(function(){
+                        scroller(eId);
+                    },1);
+
+                    marginY += speed;
+
+                        //console.log(marginY);
+                        console.log(dest);
+                    if(marginY >= dest){
+                        clearTimeout(scrolling);
+                    }
+
+                    window.scroll(0,marginY);
+
+
+                }console.log(dest);
+
+            </script>
+
+           <!-- <script>
+
+
+         /*    div.style.transition = "transition: background 0.5s ease-in;";
+                div.style.backgroundColor = "#D2691E";*/
+            function onHover(id1,id2){
+
+                 let div = document.getElementById(id1);
+                    let div2 = document.getElementById(id2);
+                div.style.transition = "background 0.5s ease-in";
+                div.style.backgroundColor = "#D2691E";
+                if(div.style.display == "block"){
+
+
+                    div.style.display = "none";
+
+                    div2.style.display = "block";
+
+
+
+                }
+                else{
+                    div.style.display = "block";
+                    div2.style.display = "none";
+                }
+
+            }
+
+
+
+
+
+
+            </script>-->
+    <!--        <script>
+
+
+               /*    div.style.transition = "transition: background 0.5s ease-in;";
+                div.style.backgroundColor = "#D2691E";*/
+            function onHover(id1,id2){
+
+                 let div = document.getElementById(id1);
+                    let div2 = document.getElementById(id2);
+                div.style.transition = "background 0.5s ease-in";
+                div.style.backgroundColor = "#D2691E";
+                if(div.style.display == "block"){
+
+
+                    div.style.display = "none";
+
+                    div2.style.display = "block";
+
+
+
+                }
+                else{
+                    div.style.display = "block";
+                    div2.style.display = "none";
+                }
+
+            }
+
+
+
+
+
+            </script>-->
+
+</body>
+</html>

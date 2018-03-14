@@ -1,0 +1,47 @@
+<html>
+<head>
+    <style>
+        #aaa{
+            background-color: red;
+            width:100%;
+            height:100vh;
+        }
+        #bbb{
+            background-color: blue;
+            width:100%;
+            height:100vh;
+        }
+    </style>
+</head>
+<body>
+        
+    <a onclick="scroller('bbb');" href="#">no dawej</a>
+    <div id="aaa"></div>
+    <div id="bbb"></div>
+    
+         <script>
+            
+            var marginY = 0;
+            var dest = 0;
+            var speed = 5;
+            var scrolling = null;
+                
+                function scroller(eId){
+                    dest = document.getElementById(eId).offsetTop;
+                    
+                    scrolling = setTimeout(function(){
+                        scroller(eId);
+                    }, 1);
+                    
+                    marginY += speed;
+                    console.log(marginY);
+                    console.log(dest);
+                    if(marginY >= dest){
+                        clearTimeout(scrolling);
+                    }
+                    
+                    window.scroll(0,marginY);
+                }
+            </script>
+</body>
+</html>

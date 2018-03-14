@@ -1,0 +1,2 @@
+najezdzanie na te okienka, jakis skrypt js
+z addclass po prostu, powinno pyknac i bedzie animacja zjezdania
