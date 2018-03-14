@@ -42,7 +42,7 @@ body{
 
 }
 .headText > img{
-  height:170px;
+  height:10rem;
 }
 
 .headTextSec{
@@ -614,7 +614,7 @@ p.mobile{
   }
 
   .headText > img{
-    height:inherit;
+    height:auto;
   }
   .headTextSec{
     font-size:inherit;
