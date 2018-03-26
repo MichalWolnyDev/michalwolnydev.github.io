@@ -124,8 +124,10 @@ body{
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+          flex:1;
 }
 .secSectionTxt{
+  width: 100%;
   text-align: center;
   font-size:14px;
   line-height: 2;
@@ -773,7 +775,7 @@ p.mobile{
 }
 @media screen and (min-width:1500px){
   .secSectionTxt{
-    font-size:1.5rem;
+    font-size:1rem;
 
   }
   .leftBar > p{
@@ -783,7 +785,7 @@ p.mobile{
     font-size:2rem;
   }
   .footerL > blockquote{
-    font-size:2rem;
+    font-size:1.5rem;
   }
   .footerR{
     font-size:1.5rem;
