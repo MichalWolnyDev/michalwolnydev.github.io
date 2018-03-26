@@ -450,6 +450,7 @@ p.mobile{
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+          float:left;
 
 }
 .footerL{
@@ -610,6 +611,9 @@ p.mobile{
 }
 .fa-youtube-play:hover{
   color: 	#de0000;
+}
+.fa-tumblr-square:hover{
+  color: 	#35465c;
 }
 .f2_click{
   cursor: pointer;
@@ -816,3 +820,15 @@ p.mobile{
 /********************/
 /*      END RWD     */
 /********************/
+
+/*IE*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .headText{
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+   .headText > img{
+     height: inherit;
+   }
+}
