@@ -415,7 +415,14 @@
           navigation: true,
           navigationTooltips: ['Strona główna','Oferta','Galeria','Asortyment','Kontakt'],
           css3:true,
-          responsiveWidth: 1100
+          responsiveWidth: 1100,
+          loopBottom: true,
+          afterRender: function(){
+            setInterval(function(){
+              $.fn.fullpage.moveSlideRight();
+            }, 5000);
+          }
+
         });
 
       });
@@ -476,7 +483,7 @@
 <script>
   let a = document.getElementById("author");
   let d = new Date();
-  a.innerHTML = "Copyright &copy; " + d.getFullYear() + "<a href='https://michalwolnydev.github.io/' target='_blank'>&nbsp;Michał Wolny</a>";
+  a.innerHTML = "Copyright &copy; " + d.getFullYear() + "&nbsp;Mir-art&nbsp;&nbsp;" + "Realizacja:<a href='https://michalwolnydev.github.io/' target='_blank'>&nbsp;Michał Wolny</a>";
 </script>
 
 </body>
