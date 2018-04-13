@@ -96,7 +96,7 @@ html.fp-enabled,
     top:50%;
   }
   .fp-slidesContainer{
-    height: 100vh;
+    height: 180vh;
   }
 }
 @media screen and (min-width:500px){
