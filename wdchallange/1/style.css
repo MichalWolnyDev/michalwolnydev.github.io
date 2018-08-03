@@ -41,7 +41,8 @@ body{
   flex-direction: row;
 }
 .col{
-  padding: 5rem;
+  box-sizing: border-box;
+  padding: 2rem;
 }
 .form_name{
   display: block;
@@ -68,6 +69,10 @@ body{
 }
 .register_form button{
   background: #8dcc28;
+  color: white;
+  height: 3rem;
+  font-size: 1rem;
+  text-shadow: 1px 1px black;
 }
 .register_form textarea{
   resize: none;
@@ -78,6 +83,13 @@ body{
   height: 40px;
   margin: 15px 0px 0px 0px;
   border-radius: 5px;
+}
+.sub_buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.input_data--sub{
+    width: 40%;
 }
 p{
   padding: 0;
