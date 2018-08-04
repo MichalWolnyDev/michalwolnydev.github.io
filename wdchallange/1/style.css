@@ -73,20 +73,43 @@ body{
   height: 3rem;
   font-size: 1rem;
   text-shadow: 1px 1px black;
+  border: 1px solid green;
 }
 .register_form textarea{
   resize: none;
   height: 300px;
+  border: 1px solid #dedede;
+  margin: 15px 0px 0px 0px;
 }
-.input_data{
+.input_icon{
+  display: flex;
+  border: 1px solid #dedede;
   width: 100%;
   height: 40px;
   margin: 15px 0px 0px 0px;
   border-radius: 5px;
+  padding: 4px 0 4px 0;
+}
+.input_data{
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+.check{
+  margin: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+}
+.icon{
+  color: #dedede;
+  padding: 12px;
+  border-right: 1px solid #dedede;
 }
 .sub_buttons{
   display: flex;
   justify-content: space-between;
+  margin: 15px 0px 0px 0px;
 }
 .input_data--sub{
     width: 40%;
