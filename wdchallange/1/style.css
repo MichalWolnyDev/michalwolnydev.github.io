@@ -108,6 +108,7 @@ body{
   height: 300px;
   border: 1px solid #dedede;
   margin: 15px 0px 0px 0px;
+  box-sizing: border-box;
 }
 .input_icon{
   display: -webkit-box;
