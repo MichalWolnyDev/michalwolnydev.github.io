@@ -4,18 +4,28 @@ body{
   background-image: url("img/bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .container{
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 50px;
 }
 .logo_top{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width:100%;
   padding: 2rem;
   opacity: .3;
@@ -25,8 +35,12 @@ body{
   height: auto;
 }
 .logo_bot{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 4rem;
   opacity: .3;
 }
@@ -36,12 +50,20 @@ body{
 }
 .row{
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .col{
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 2rem;
 }
 .form_name{
@@ -59,7 +81,8 @@ body{
   background: white;
   margin:0 auto;
   padding: 1rem;
-  box-shadow: 0 0 0 20px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 0 20px rgba(0, 0, 0, .3);
+          box-shadow: 0 0 0 20px rgba(0, 0, 0, .3);
 }
 
 .register_form input[type="checkbox"]{
@@ -87,6 +110,8 @@ body{
   margin: 15px 0px 0px 0px;
 }
 .input_icon{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 1px solid #dedede;
   width: 100%;
@@ -124,15 +149,25 @@ body{
  }
 .check{
   margin: 20px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .check_email{
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .check_email--rem{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .icon{
   color: #dedede;
@@ -140,8 +175,12 @@ body{
   border-right: 1px solid #dedede;
 }
 .sub_buttons{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 15px 0px 0px 0px;
 }
 
@@ -151,7 +190,10 @@ p{
 }
 @media only screen and (max-width: 600px){
   .row{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .col{
     width: 100%;
@@ -166,7 +208,10 @@ p{
 }
 @media only screen and (min-width: 600px){
   .row{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .col{
     width: 100%;
@@ -174,7 +219,10 @@ p{
 }
 @media only screen and (min-width: 999px){
   .row{
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .col{
     width: 100%;
