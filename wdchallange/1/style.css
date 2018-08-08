@@ -79,14 +79,6 @@ body{
   border-radius: 1px;
   background-color: #8dcc28;
 }
-/*.register_form button{
-  background: #8dcc28;
-  color: white;
-  height: 3rem;
-  font-size: 1rem;
-  text-shadow: 1px 1px black;
-  border: 1px solid green;
-}*/
 .register_form textarea{
   resize: none;
   height: 300px;
