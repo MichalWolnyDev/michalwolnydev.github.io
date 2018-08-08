@@ -57,9 +57,10 @@
 
             <div class="check">
               <input class="input_data" type="checkbox">
+              <span class="checkmark"></span>
               <span>I have read and accept the terms of use.</span>
             </div>
-            <button class="input_data" type="button">Sign up</button>
+            <button class="input_data input_data--btn" type="button">Sign up</button>
 
           </form>
         </div>
@@ -86,7 +87,7 @@
               <span>Send a copy to my Email</span>
 
             </div>
-            <button class="input_data" type="button">Send Email</button>
+              <button class="input_data input_data--btn" type="button">Send Email</button>
 
           </form>
         </div>
@@ -111,12 +112,14 @@
               </label>
                 <input class="input_data" type="password" name="password" placeholder="Password" required>
             </div>
-            <div class="check">
+            <div class="check check_email">
+              <div class="check_email--rem">
               <input class="input_data" type="checkbox">
               <span>Remember me</span>
-
             </div>
-            <button class="input_data" type="button">Send Email</button>
+              <button class="input_data input_data--btn input_data--rec" type="button">Send Email</button>
+            </div>
+
 
           </form>
         </div>
@@ -139,8 +142,8 @@
 
 
             <div class="sub_buttons">
-              <button class="input_data input_data--sub" type="button">Send</button>
-              <button class="input_data input_data--sub" type="button">Done</button>
+              <button class="input_data input_data--btn input_data--rec" type="button">Send</button>
+              <button class="input_data input_data--btn input_data--rec input_data--done" type="button" disabled>Done</button>
             </div>
 
           </form>
@@ -156,8 +159,8 @@
             </div>
 
             <div class="sub_buttons">
-              <button class="input_data input_data--sub" type="button">Subscribe</button>
-              <button class="input_data input_data--sub" type="button" style="background-color: red; border: 1px solid red">No, Thanks</button>
+              <button class="input_data input_data--btn input_data--rec" type="button">Subscribe</button>
+              <button class="input_data input_data--btn input_data--rec" type="button" style="background-color: red; border: 1px solid red">No, Thanks</button>
             </div>
           </form>
         </div>

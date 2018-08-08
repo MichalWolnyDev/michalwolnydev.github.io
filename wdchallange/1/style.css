@@ -65,16 +65,28 @@ body{
 .register_form input[type="checkbox"]{
   height: 20px;
   width: 20px;
-  float: left;
+  -webkit-appearance: none;
+  position: relative;
+  border: 1px solid #dedede;
 }
-.register_form button{
+.register_form input[type=checkbox]:checked::after{
+  position: absolute;
+  content: "";
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 1px;
+  background-color: #8dcc28;
+}
+/*.register_form button{
   background: #8dcc28;
   color: white;
   height: 3rem;
   font-size: 1rem;
   text-shadow: 1px 1px black;
   border: 1px solid green;
-}
+}*/
 .register_form textarea{
   resize: none;
   height: 300px;
@@ -95,9 +107,38 @@ body{
   border: none;
   padding: 10px;
 }
+.input_data:hover{
+  cursor: pointer;
+}
 
+.input_data--btn{
+    border-radius: 5px;
+    background: #8dcc28;
+    color: white;
+    height: 3rem;
+    font-size: 1rem;
+    text-shadow: 1px 1px black;
+    border: 1px solid green;
+}
+.input_data--rec{
+  width: 40%;
+}
+ .input_data--done{
+   background-color: #c0de9d;
+ }
+ .input_data--done:hover{
+   cursor: not-allowed;
+
+ }
 .check{
   margin: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+}
+.check_email{
+  justify-content: space-between;
+}
+.check_email--rem{
   display: flex;
   align-items: center;
 }
@@ -111,9 +152,7 @@ body{
   justify-content: space-between;
   margin: 15px 0px 0px 0px;
 }
-.input_data--sub{
-    width: 40%;
-}
+
 p{
   padding: 0;
   margin-left: 30px;
