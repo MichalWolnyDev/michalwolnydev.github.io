@@ -175,10 +175,7 @@ input[type=text], input[type=password]{
       -ms-flex-align: center;
           align-items: center;
 }
-.check_text{
-  display: flex;
-  align-items: center;
-}
+
 .icon{
   color: #dedede;
   padding: 12px;
