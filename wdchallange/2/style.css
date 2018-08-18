@@ -155,7 +155,10 @@ html, body{
   color: grey;
   text-align: center;
 }
+.menu-link{
+  font-weight: bold;
 
+}
 @media (max-width: 991.98px) {
   .ourserv{
     font-size: 2.5rem;
