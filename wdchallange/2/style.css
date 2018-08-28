@@ -3,6 +3,12 @@ html, body{
   font-size: 1rem;
 
 }
+.n-anim{
+  transition: all 0.5s ease;
+}
+.active{
+  border-top: 2.5px solid #ff6033;
+}
 .header{
   min-height: 100vh;
   background-image: url("header/img.png");

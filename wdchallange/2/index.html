@@ -9,34 +9,34 @@
   <title>Challange 2</title>
 </head>
 <body>
-  <div class="container-fluid padd no-gutters">
-    <nav class="nav navbar-expand-lg fixed-top p-4 navbar-light">
-        <div class="container d-flex">
+  <div id="test" data-spy="scroll" data-target="#navbar" data-offset="0" class="container-fluid padd no-gutters">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top p-4 navbar-light n-anim">
+        <div class="container">
           <a class="navbar-brand" href="#"><img src="header/logo.png" alt="logo"></a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="content" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#content" aria-controls="content" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse d-flex justify-content-end" id="content">
-            <ul class="navbar-nav ">
+          <div class="collapse navbar-collapse justify-content-end" id="content">
+            <ul class="navbar-nav navbar-light text-center">
               <li class="nav-item">
-                <a data-scroll class="nav-link menu-link" href="#">HOME</a>
+                <a data-scroll class="nav-link menu-link active" href="#">HOME</a>
               </li>
               <li class="nav-item">
-                <a data-scroll class="nav-link menu-link" href="#about">ABOUT</a>
+                <a data-scroll class="nav-link menu-link " href="#about">ABOUT</a>
               </li>
               <li class="nav-item">
-                <a data-scroll class="nav-link menu-link" href="#services">SERVICES</a>
+                <a data-scroll class="nav-link menu-link " href="#services">SERVICES</a>
               </li>
               <li class="nav-item">
-                <a data-scroll class="nav-link menu-link" href="#gallery">GALLERY</a>
+                <a data-scroll class="nav-link menu-link " href="#gallery">GALLERY</a>
               </li>
               <li class="nav-item">
-                <a data-scroll class="nav-link menu-link" href="#blog">BLOG</a>
+                <a data-scroll class="nav-link menu-link " href="#blog">BLOG</a>
               </li>
               <li class="nav-item">
-                <a data-scroll class="nav-link menu-link" href="#contact">CONTACT</a>
+                <a data-scroll class="nav-link menu-link " href="#contact">CONTACT</a>
               </li>
 
 
@@ -49,7 +49,7 @@
 
     </nav>
 
-    <div class="header d-flex">
+    <div class="header d-flex" id="header">
       <div class="container align-self-center">
         <div class="row">
           <div class="col-12 col-md-4">
@@ -287,5 +287,7 @@
   <script>
 	 var scroll = new SmoothScroll('a[href*="#"]');
   </script>
+  <script src="script.js"></script>
+  <script src="scroll.js"></script>
 </body>
 </html>
