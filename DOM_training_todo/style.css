@@ -1,0 +1,12 @@
+.task{
+  border: none !important;
+  border-bottom: 2px solid #f4f4f4 !important;
+}
+.delete__task{
+  color: red;
+  font-weight: 900;
+  float: right;
+}
+.delete__task:hover{
+  cursor: pointer;
+}
