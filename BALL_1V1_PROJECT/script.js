@@ -1,26 +1,42 @@
 var player_one;
 var player_two;
 var ball;
+var goal_one;
+var goal_two;
+var po_points = 0, pt_points = 0;
 
 function play(){
   pitch.start();
   pitch.elements();
-  player_one = new Player(250, 300, "white");
-  player_two = new Player(750, 300, "blue");
-  ball = new Ball(500, 300, "aqua");
+  player_one = new Player(30, 30, 250, 350, "white");
+  player_two = new Player(30, 30, 750, 350, "blue");
+  ball = new Ball(500, 300, "black");
+  goal_one = new Goal(10, 100, 0, 300, "white");
+  goal_two = new Goal(10, 100, 1035, 300, "blue");
+
 
 }
 // Boisko
 var pitch = {
   canvas: document.createElement('canvas'),
   start: function(){
-    this.canvas.width = 1000;
-    this.canvas.height = 600;
+    this.canvas.width = 1045;
+    this.canvas.height = 700;
     this.canvas.id = 'canvas';
     this.canvas.className = 'canvas';
     this.ctx = this.canvas.getContext('2d');
+
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     this.interval = setInterval(updatePitch, 20); //gra dziala w 50 klatkach/s
+
+    window.addEventListener('keydown', function(e){
+      pitch.keys = (pitch.keys || []);
+      pitch.keys[e.keyCode] = (e.type == 'keydown');
+    })
+
+    window.addEventListener('keyup', function(e){
+      pitch.keys[e.keyCode] = (e.type == 'keydown');
+    })
   },
   elements: function(){ //rysowanie lini dzielacej polowy boiska oraz okrag srodkowy
     ctx = pitch.ctx;
@@ -40,27 +56,13 @@ var pitch = {
 }
 // Konstruktor pilki
 var Ball = function(x, y, color){
-  var r = 10, startangle = 0, endangle = 2*Math.PI;
-  this.x = x;
-  this.y = y;
-  this.update = function(){
-    ctx = pitch.ctx;
-    ctx.beginPath();
-
-    ctx.arc(this.x, this.y, r, startangle, endangle);
-    ctx.fillStyle = color;
-    ctx.fill(); // wypelnieie pilki kolorem
-    ctx.stroke(); // rysowanie pilki
-  }
-
-}
-// Konstruktor gracza
-var Player = function(x, y, color){
-  this.r = 20;
+  this.r = 10;
   this.startangle = 0;
   this.endangle = 2*Math.PI;
   this.x = x;
   this.y = y;
+  this.dx = 8;
+  this.dy = -3;
   this.speedX = 0;
   this.speedY = 0;
   this.update = function(){
@@ -69,40 +71,137 @@ var Player = function(x, y, color){
 
     ctx.arc(this.x, this.y, this.r, this.startangle, this.endangle);
     ctx.fillStyle = color;
-    ctx.fill(); // wypelnieie graczy kolorem
-    ctx.stroke(); // rysowanie graczy
+    ctx.fill(); // wypelnieie pilki kolorem
+    ctx.stroke(); // rysowanie pilki
   }
   this.position = function(){
-    this.x = this.speedX;
-    this.y = this.speedY;
+    this.x += this.speedX;
+    this.y += this.speedY;
   }
 
 }
-// Sterowanie
-document.onkeydown = checkKey;
+// Konstruktor gracza
+var Player = function(width, height, x, y, color){
+  this.width = width;
+  this.height = height;
+  this.x = x;
+  this.y = y;
+  this.speedX = 0;
+  this.speedY = 0;
+  this.update = function(){
+    ctx = pitch.ctx;
+    ctx.fillStyle = color;
+    ctx.fillRect(this.x, this.y, this.width, this.height);
 
-function checkKey(e){
-  e = e || window.event;
-
-  if(e.keyCode == '37'){
-    player_one.speedX -= 4;
   }
-  else if(e.keyCode == '38'){
-    player_one.speedY -= 4;
-  }
-  else if(e.keyCode == '39'){
-    player_one.speedX += 4;
-  }
-  else if(e.keyCode == '40'){
-    player_one.speedY += 4;
+  this.position = function(){
+    this.x += this.speedX;
+    this.y += this.speedY;
   }
 
+
+
+}
+//konstruktor bramki
+var Goal = function(width, height, x, y, color){
+  this.width = width;
+  this.height = height;
+  this.x = x;
+  this.y = y;
+  this.update = function(){
+    ctx = pitch.ctx;
+    ctx.fillStyle = color;
+    ctx.fillRect(this.x, this.y, this.width, this.height);
+  }
+}
+function collide(ball, player_one){
+  var distX = Math.abs(ball.x - player_one.x - player_one.width/2);
+  var distY = Math.abs(ball.y - player_one.y - player_one.height/2);
+
+  if(distX > (player_one.width/2 + ball.r)) return false;
+  if(distY > (player_one.height/2 + ball.r)) return false;
+
+  if(distX <= (player_one.width/2)) return true;
+  if(distY <= (player_one.height/2)) return true;
+
+  var dx = distX - player_one.width / 2;
+  var dy = distY - player_one.height / 2;
+
+  return (dx * dx + dy * dy <= (ball.r * ball.r));
 }
 // Czyszczenie i rysowanie boiska na nowo
 function updatePitch(){
   pitch.clear();
-  player_one.update();
-    player_one.position();
-  player_two.update();
+
+  player_one.speedX = 0;
+  player_one.speedY = 0;
+
+  if(pitch.keys && pitch.keys[65]) {
+    player_one.speedX -= 6;
+  }
+  if(pitch.keys && pitch.keys[87]) {
+    player_one.speedY -= 6;
+  }
+  if(pitch.keys && pitch.keys[68]) {
+    player_one.speedX = 6;
+  }
+  if(pitch.keys && pitch.keys[83]) {
+    player_one.speedY = 6;
+  }
+
+  player_two.speedX = 0;
+  player_two.speedY = 0;
+
+  if(pitch.keys && pitch.keys[37]) {
+    player_two.speedX -= 6;
+  }
+  if(pitch.keys && pitch.keys[38]) {
+    player_two.speedY -= 6;
+  }
+  if(pitch.keys && pitch.keys[39]) {
+    player_two.speedX = 6;
+  }
+  if(pitch.keys && pitch.keys[40]) {
+    player_two.speedY = 6;
+  }
+
+  // odbicie pilki
+  if(ball.x + ball.dx > canvas.width - ball.r || ball.x + ball.dx < ball.r){
+     ball.dx = -ball.dx;
+  }
+  if(ball.y + ball.dy > canvas.height - ball.r || ball.y + ball.dy < ball.r){
+    ball.dy = -ball.dy;
+  }
+
+  ball.x += ball.dx;
+  ball.y += ball.dy;
+  // odbicie pilki od gracza
+  if(collide(ball, player_one)){
+    ball.dx = -ball.dx;
+
+  }
+
+  if(collide(ball, player_two)){
+    ball.dx = -ball.dx;
+  }
+
+  //kolizja ze sciana player_one
+  if(player_one.x < 0) player_one.x = 0;
+  if(player_one.y < 0) player_one.y = 0;
+  if(player_one.x + player_one.width > canvas.width) player_one.x = canvas.width - player_one.width;
+  if(player_one.y + player_one.height > canvas.height) player_one.y = canvas.height - player_one.height;
+  //kolizja ze sciana player_two
+  if(player_two.x < 0) player_two.x = 0;
+  if(player_two.y < 0) player_two.y = 0;
+  if(player_two.x + player_two.width > canvas.width) player_two.x = canvas.width - player_two.width;
+  if(player_two.y + player_two.height > canvas.height) player_two.y = canvas.height - player_two.height;
+
+  ball.position();
   ball.update();
+  player_one.position();
+  player_one.update();
+  player_two.position();
+  player_two.update();
+  goal_one.update();
+  goal_two.update();
 }
