@@ -99,10 +99,11 @@
   text-decoration: none;
   color: inherit;
 }
-.contact__links:hover{
+.contact__links:visited{
   text-decoration: none;
   color: inherit;
 }
-.project__desc--link{
-  /* background-color: #007EA7; */
+.contact__links:hover{
+  text-decoration: none;
+  color: inherit;
 }
